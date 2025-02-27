@@ -1,0 +1,154 @@
+:root {
+	--day-sunny: rgb(241, 231, 96);
+	--day-cloudy: rgb(157, 168, 180);
+	--day-rainy: rgb(150, 150, 150);
+	--day-snowy: rgb(206, 206, 206);
+	--night-clear: rgb(47, 71, 137);
+	--night-cloudy: rgb(92, 98, 104);
+	--night-rainy: rgb(28, 35, 43);
+	--night-snowy: rgb(84, 89, 94);
+  --day-bottom: rgba(115, 173, 232, 1) 24%;
+  --night-bottom: rgba(22, 33, 63, 1) 24%;
+	--top-color: rgb(238, 238, 238);
+  --bottom-color: rgb(238, 238, 238);
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(238, 238, 238);
+  
+}
+* {
+	font-family: "Quicksand", serif;
+}
+
+#container {
+	background: linear-gradient(
+		0deg,
+		var(--bottom-color),
+		var(--top-color) 83%
+	);
+	border-radius: 12px;
+	text-align: center;
+	width: 40%;
+  padding-bottom: 30px;
+}
+
+.nav {
+	display: flex;
+	width: 100%;
+}
+
+.nav button {
+	border: none;
+	border-radius: 0;
+	width: 100%;
+	height: 30px;
+	background: #4361ee;
+	color: white;
+}
+.nav button:first-child {
+	border-top-left-radius: 10px;
+}
+.nav button:last-child {
+	border-top-right-radius: 10px;
+}
+
+.nav button:not(.nav button:last-child) {
+	border-right: solid 2px white;
+}
+
+.nav button:hover {
+	background: #3b57d3;
+	cursor: pointer;
+}
+
+.weatherForm {
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.weatherForm input {
+	height: 30px;
+	border-radius: 50px;
+	padding-left: 15px;
+	border: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	width: 70%;
+  outline: none;
+}
+
+.weatherForm button {
+	border-radius: 50px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	height: 32px;
+	margin-left: -5px;
+	border: none;
+	width: 20%;
+	background: #4361ee;
+	color: white;
+	font-weight: bold;
+
+}
+
+.weatherForm button:hover {
+	background: #3b57d3;
+	cursor: pointer;
+}
+
+#weather-icon {
+	width: 100px;
+	transform: scale(1.4);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr ;
+  align-items: center;
+}
+
+.description {
+	font-size: 18px;
+}
+
+h3 {
+	font-size: 13px;
+	color: rgb(40, 70, 101);
+}
+
+.temperature-value {
+	font-size: 20px;
+  font-weight: 400;
+}
+
+.highlow-temp div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlow-temp img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.highlow-temp div div {
+  display: flex;
+  align-items: center;
+
+}
+
+.errorMessage {
+  margin-top: -10px;
+  color: red !important;
+  font-weight: bold;
+  display: none;
+}
+
+.title {
+  display: block;
+}

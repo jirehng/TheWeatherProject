@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div class="nav">
+        <button>Today</button>
+      </div>
+      <form class="weatherForm">
+        <input type="text" id="cityInput" placeholder="Enter city name..." />
+        <button id="submit" type="submit" class="submit">Search</button>
+      </form>
+      <p class="errorMessage">Error, invalid city name</p>
+      <div id="weather-info">
+        <img alt="" id="weather-icon" />
+        <h1 class="city">Toronto</h1>
+        <p class="temperature-value">12 &degC</p>
+        <h2 class="description">Sunny</h2>
+        <div class="grid">
+          <div class="highlow-temp">
+            <h3>Temperature</h3>
+            <div>
+              <div>
+                <img src="/Images/Icons/temp_high.svg" alt="" />
+                <p class="high-temp"></p>
+              </div>
+              <div>
+                <img src="/Images/Icons/temp_low.svg" alt="" />
+                <p class="low-temp"></p>
+              </div>
+            </div>
+          </div>
+          <div class="feels-like">
+            <h3>Feels Like</h3>
+            <p class="feels-like-value">9 &degC</p>
+          </div>
+          <div class="humidity">
+            <h3>Humidity</h3>
+            <p class="humidity-value">75%</p>
+          </div>
+          <div class="sun">
+            <h3 class="sunH3"></h3>
+            <p class="sun-value">2</p>
+          </div>
+          <div class="wind">
+            <h3>Wind</h3>
+            <p class="wind-value">10 km/h[W]</p>
+          </div>
+          <div class="visibility">
+            <h3>Visibility</h3>
+            <p class="visibility-value"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
