@@ -16,7 +16,7 @@ let isSunrise;
 let windDeg;
 const rootStyle = getComputedStyle(root);
 let locationTime;
-const utc = Math.floor((new Date()).getTime() / 1000)
+const utc = Math.floor((new Date()).getTime() / 1000);
 
 document
   .querySelectorAll("body *:not(div):not(form):not(input):not(form button):not(.errorMessage):not(.title)")
@@ -68,8 +68,8 @@ function displayWeatherInfo(data) {
   } = data;
   if(Date.now() > sunrise) isSunrise = false;
   else isSunrise = true;
-  locationTime = new Date(utc + timezone  * 1000)
-  locationTime = locationTime.getHours() - 4;
+  locationTime = new Date((utc + timezone) * 1000);
+  locationTime = locationTime.getUTCHours();
   cityV.innerHTML = city + ", " + country;
   temperatureV.innerHTML = (temp - 273.15).toFixed(1) + "&degC";
   feelsLikeV.innerHTML = (feels_like - 273.15).toFixed(1) + "&degC";
@@ -93,6 +93,7 @@ function displayWeatherInfo(data) {
     document.querySelectorAll('p, h1, h2').forEach(e => e.style.color = "")
     document.querySelectorAll('h3').forEach(e => e.style.color = "")
   }
+  alert(locationTime)
 
   // Render Card
   document.querySelectorAll("*").forEach((element) => {
@@ -202,4 +203,8 @@ function colorDeterminer(weatherID, time) {
     else if (weatherID < 802 && weatherID >= 800) return '--night-clear'
     else return '--night-cloudy'
   }
+}
+
+function dayOrNight(time) {
+  
 }
