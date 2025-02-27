@@ -14,7 +14,6 @@ const lowtemp = document.querySelector(".low-temp");
 const visibilityV = document.querySelector(".visibility-value");
 let isSunrise;
 let windDeg;
-let currentTime;
 const rootStyle = getComputedStyle(root);
 let locationTime;
 const utc = Math.floor((new Date()).getTime() / 1000)
@@ -70,9 +69,7 @@ function displayWeatherInfo(data) {
   if(Date.now() > sunrise) isSunrise = false;
   else isSunrise = true;
   locationTime = new Date(utc + timezone  * 1000)
-  locationTime = locationTime.getHours() + 1;
-  currentTime = new Date(Date.now());
-  currentTime = currentTime.getHours();
+  locationTime = locationTime.getHours() - 4;
   cityV.innerHTML = city + ", " + country;
   temperatureV.innerHTML = (temp - 273.15).toFixed(1) + "&degC";
   feelsLikeV.innerHTML = (feels_like - 273.15).toFixed(1) + "&degC";
@@ -88,8 +85,8 @@ function displayWeatherInfo(data) {
   console.log(data);
   document.querySelector("#weather-icon").src = `Images/weather icons/${getWeatherIcon(weatherID, locationTime)}.svg`;
   root.style.setProperty('--top-color', rootStyle.getPropertyValue(colorDeterminer(weatherID, locationTime))); 
-  root.style.setProperty('--bottom-color', locationTime < 18 ? rootStyle.getPropertyValue('--day-bottom') : rootStyle.getPropertyValue('--night-bottom'))
-  if(locationTime >= 18) {
+  root.style.setProperty('--bottom-color', locationTime < 18 && locationTime > 5 ? rootStyle.getPropertyValue('--day-bottom') : rootStyle.getPropertyValue('--night-bottom'))
+  if(locationTime >= 18 || locationTime <= 5) {
     document.querySelectorAll('p, h1, h2').forEach(e => e.style.color = "white")
     document.querySelectorAll('h3').forEach(e => e.style.color = "rgb(127, 160, 194)")
   } else {
@@ -104,7 +101,7 @@ function displayWeatherInfo(data) {
 }
 
 function getWeatherIcon(weatherID, time) {
-  if (time < 18) {
+  if (time < 18 && time > 5) {
     // ! DAY TIME
     if (weatherID == 300 || weatherID == 310) return "light-drizzle-day";
     else if (weatherID > 300 && weatherID < 500) return "drizzle-day";
@@ -192,7 +189,7 @@ function sunH3(sunTime, time) {
 
 function colorDeterminer(weatherID, time) {
   // Maybe use sunrise and sunset time instead in the future
-  if(time < 18) {
+  if(time < 18 && time > 5) {
     // ! DAY TIME 
     if(weatherID < 600) return '--day-rainy'
     else if (weatherID <= 622) return '--day-snowy'
