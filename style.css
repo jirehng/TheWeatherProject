@@ -152,3 +152,7 @@ h3 {
 .title {
   display: block;
 }
+
+.hightemp {
+	margin-right: 20px;
+}
