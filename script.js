@@ -93,7 +93,6 @@ function displayWeatherInfo(data) {
     document.querySelectorAll('p, h1, h2').forEach(e => e.style.color = "")
     document.querySelectorAll('h3').forEach(e => e.style.color = "")
   }
-  alert(locationTime)
 
   // Render Card
   document.querySelectorAll("*").forEach((element) => {
