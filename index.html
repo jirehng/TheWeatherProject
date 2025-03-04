@@ -3,68 +3,143 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>The Weather App</title>
+		<title>Jireh Ng</title>
+		<link rel="icon" href="" />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
 			rel="stylesheet"
 		/>
-		 <link rel="icon" href="/Images/weather icons/cloudy-day.svg">
 	</head>
 	<body>
-		<div id="container">
-			<div class="nav">
-				<button>Today</button>
+		<nav>
+			<h1 class="title">Jireh Ng</h1>
+		</nav>
+
+		<section class="banner">
+			<img src="Images/Pfp.png" alt="" />
+			<div>
+				<h1 class="bold">
+					Hi, my name is <span class="myName">Jireh Ng</span>
+				</h1>
+				<p>
+					High school student experienced in web development, UI/UX design,
+					programming, and in the process of learining app development
+				</p>
 			</div>
-			<form class="weatherForm">
-				<input type="text" id="cityInput" placeholder="Enter city name..." />
-				<button id="submit" type="submit" class="submit">Search</button>
-			</form>
-			<p class="errorMessage">Error, invalid city name</p>
-			<div id="weather-info">
-				<img alt="" id="weather-icon" />
-				<h1 class="city">Toronto</h1>
-				<p class="temperature-value">12 &degC</p>
-				<h2 class="description">Sunny</h2>
-				<div class="grid">
-					<div class="highlow-temp">
-						<h3>Temperature</h3>
-						<div>
-							<div class="hightemp">
-								<img src="Images/Icons/temp_high.svg" alt="" />
-								<p class="high-temp"></p>
-							</div>
-							<div>
-								<img src="Images/Icons/temp_low.svg" alt="" />
-								<p class="low-temp"></p>
-							</div>
-						</div>
-					</div>
-					<div class="feels-like">
-						<h3>Feels Like</h3>
-						<p class="feels-like-value">9 &degC</p>
-					</div>
-					<div class="humidity">
-						<h3>Humidity</h3>
-						<p class="humidity-value">75%</p>
-					</div>
-					<div class="sun">
-						<h3 class="sunH3"></h3>
-						<p class="sun-value">2</p>
-					</div>
-					<div class="wind">
-						<h3>Wind</h3>
-						<p class="wind-value">10 km/h[W]</p>
-					</div>
-					<div class="visibility">
-						<h3>Visibility</h3>
-						<p class="visibility-value"></p>
-					</div>
+		</section>
+
+		<section class="aboutme">
+			<h2>Howdy!</h2>
+			<p>
+				I am a high school student in Canada passionate about technology and
+				software development. I've learned several programming languages through
+				school and by myself. Specifically, I learned Python, Java, and Swift in
+				high school, and self-taught HTML, CSS, Javascript, and React JS in my
+				own time. I have built a variety of projects to demonstrate my skill,
+				which can be found in the projects section. I am always looking for
+				growth and improvement, as well as oppourtunities to build up my skill
+				and connections! Feel free to look around, and I hope you
+				enjoy this little portfolio about me! :)
+			</p>
+		</section>
+		<h2 class="skillHeading">Have Experience With...</h2>
+		<section class="skills">
+			<div class="html">
+				<img src="Images/HTML.svg" alt="" />
+			</div>
+			<div class="css">
+				<img src="Images/CSS.svg" alt="" />
+			</div>
+			<div class="javascript">
+				<img src="Images/javascript.svg" alt="" />
+			</div>
+			<div class="react">
+				<img src="Images/react.svg" alt="" />
+			</div>
+			<div class="python">
+				<img src="Images/python.svg" alt="" />
+			</div>
+			<div class="java">
+				<img src="Images/java.svg" alt="" />
+			</div>
+
+			<div class="swift">
+				<img src="Images/swift.svg" alt="" />
+			</div>
+		</section>
+		<h2 class="projectH2">Projects</h2>
+		<p class="instruction">Links and repos can be found in my <a href="https://github.com/jirehng" target="_blank">Github page</a></p>
+		<section class="projects">
+			<div class="card js">
+				<div class="cardContent">
+					<img src="Images/theweatherproject.svg" alt="">
+					<h3 class="projectTitle">The Weather Project</h3>
+					<p class="languages">HTML, CSS, Javascript</p>
+					<p class="projectDescription">A dynamic weather website using Openweather API to show the local current weather forecast for any city</p>
+
 				</div>
 			</div>
+			<div class="card reactjs">
+				<div class="cardContent">
+					<img src="Images/todolist.svg" alt="">
+					<h3 class="projectTitle">Mini Todo</h3>
+					<p class="languages">HTML, CSS, React.js</p>
+					<p class="projectDescription">A simple todo-list application that allow user to add new task, complete existing tasks, and delete unwanted tasks</p>
+				</div>
+			</div>
+			<div class="card cssC">
+				<div class="cardContent">
+					<img src="Images/calculator.svg" alt="">
+					<h3 class="projectTitle">Simple Calculator</h3>
+					<p class="languages">HTML, CSS, React.js</p>
+					<p class="projectDescription">A simple calculator app with basic mathematical operations built using React.js</p>
+				</div>
+			</div>
+			<div class="card htmlC">
+				<div class="cardContent">
+					<img src="Images/tictactoe.svg" alt="">
+					<h3 class="projectTitle">TicTacToe</h3>
+					<p class="languages">HTML, CSS, React.js</p>
+					<p class="projectDescription">A TicTacToe game</p>
+				</div>
+			</div>
+			<div class="card javaC">
+				<div class="cardContent">
+					<img src="Images/juggernaut assault.png" alt="" class="ja">
+					<h3 class="projectTitle">Juggernaut Assault</h3>
+					<p class="languages">Java, Java Graphics</p>
+					<p class="projectDescription">A simple todo-list application that allow user to add new task, complete existing tasks, and delete unwanted tasks</p>
+				</div>
+			</div>
+			<div class="card reactjs">
+				<div class="cardContent">
+					<img src="Images/cards.svg" alt="">
+					<h3 class="projectTitle">Memory Card Game</h3>
+					<p class="languages">HTML, CSS, Javascript</p>
+					<p class="projectDescription">A simple todo-list application that allow user to add new task, complete existing tasks, and delete unwanted tasks</p>
+				</div>
+			</div>
+			<div class="card static">
+				<div class="cardContent">
+					<img src="Images/website.svg" alt="">
+					<h3 class="projectTitle">10+ Static Website</h3>
+					<p class="languages">HTML, CSS, Javascript</p>
+					<p class="projectDescription">A simple todo-list application that allow user to add new task, complete existing tasks, and delete unwanted tasks</p>
+				</div>
 		</div>
-		<script src="script.js"></script>
+		</section>
+
+		<footer>
+			<h1>Jireh Ng</h1>
+			<div class="media">
+				<p><img src="Images/gmail.svg" alt=""> jirehng123@gmail.com</p>
+				<p><img src="Images/github.svg" alt="" />jirehng</p>
+				<p><img src="Images/instagram.svg" alt="" /> jirehng123333</p>
+			</div>
+		</footer>
 	</body>
+	<script src="/script.js"></script>
 </html>
